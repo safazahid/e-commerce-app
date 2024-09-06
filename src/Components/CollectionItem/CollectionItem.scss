@@ -1,0 +1,35 @@
+.collection-item {
+  width: 25%;
+  display: flex;
+  flex-direction: column;
+  height: 350px;
+  align-items: center;
+  margin-right: 15px;
+
+
+  .image {
+    width: 100%;
+    height: 80%;
+    background-size: cover;
+    background-position: center;
+    margin-bottom: 10px;
+  }
+  .collection-footer {
+    width: 100%;
+    height: 5%;
+    display: flex;
+    justify-content: space-between;
+    font-size: 19px;
+    font-family: "PT Sans Narrow", sans-serif;
+    color: #4a4a4a;
+
+
+    .name {
+      width: 90%;
+      margin-bottom: 10px;
+    }
+    .price {
+      width: 12%;
+    }
+  }
+}

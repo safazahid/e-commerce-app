@@ -1,0 +1,21 @@
+.header{
+  display: flex;
+  justify-content: space-between;
+  margin: 30px 25px;
+  .logo {
+    width: 43px;
+    height: 43px;
+    // padding-top: 30px;
+    padding-left: 20px; 
+  }
+
+  .options {
+    display: flex;
+    .option {
+      margin-right: 16px;
+      text-decoration: none;
+      color: #4a4a4a;
+      font-family: "PT Sans Narrow", sans-serif;
+    }
+  }
+}

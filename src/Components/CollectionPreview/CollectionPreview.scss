@@ -1,0 +1,19 @@
+.collection-preview {
+  display: flex;
+  flex-direction: column;
+  padding-left: 30px;
+  padding-right: 20px;
+  justify-content: space-between;
+
+  .title {
+    font-size: 25px;
+    margin-bottom: 15px;
+    font-family: "PT Sans Narrow", sans-serif;
+    font-weight: 600;
+
+  }
+  .preview {
+    display: flex;
+  }
+  
+}

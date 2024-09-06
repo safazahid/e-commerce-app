@@ -1,0 +1,30 @@
+$sub-color : grey;
+.group{
+    position: relative;
+    margin: 45px 0;
+
+    .form-input{
+        background: none;
+        background-color: white;
+        color: $sub-color;
+        font-size: 20px;
+        padding: 10px 10px 10px 5px;
+        display: block;
+        width: 100%;
+        border: none;
+        border-radius: 0;
+        border-bottom: 1px solid $sub-color;
+        &:focus{
+            outline: none;
+        }
+    }
+    .form-input-label {
+        color: $sub-color;
+        font-size: 15px;
+        font-weight: normal;
+        position: absolute;
+        left: 5px;
+        top: 10px;
+        transition: 200ms ease all;
+    }
+}
