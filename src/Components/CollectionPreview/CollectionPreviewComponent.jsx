@@ -3,17 +3,15 @@ import { Link } from 'react-router-dom/cjs/react-router-dom.min'
 import './CollectionPreview.scss'
 import CollectionItemComponent from '../CollectionItem/CollectionItemComponent';
 
-const CollectionPreviewComponent = ({data, filteredProducts}) => {
+const CollectionPreviewComponent = ({data}) => {
   return (
     <div className='collection-preview'>
-      <h1 className='title' style={{ textDecoration: 'none'}} >
-        <Link to={`/shop?${data.routeName.toLowerCase()}`}>
+      <h1 className='title' >
         {data?.title.toUpperCase()} 
-        </Link>
         </h1>
       <div className='preview'>
          {
-          data?.items?.filter((item, idx) => idx < 4).map(item => (<CollectionItemComponent key={item.id} items={item} /> ))
+          data?.items?.filter((item, idx) => idx < 4).map(item => (<CollectionItemComponent key={item.id} item={item} /> ))
          }
       </div>
     </div>

@@ -1,15 +1,15 @@
 import React from 'react'
 import './CollectionItem.scss'
 
-const CollectionItemComponent = ({items}) => {
+const CollectionItemComponent = ({item}) => {
   return (
     <div className='collection-item'>
       <div className='image' style={{
-          backgroundImage: `url(${items?.imageUrl})`
+          backgroundImage: `url(${item?.imageUrl})`
         }}/>
         <div className='collection-footer'>
-          <span className='name'>{items?.name}</span>
-          <span className='price'>${items?.price}</span>
+          <span className='name'>{item?.name}</span>
+          <span className='price'>${item?.price}</span>
         </div>
     </div>
   )
