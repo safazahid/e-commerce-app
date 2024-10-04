@@ -1,8 +1,9 @@
 import React, {useContext} from 'react';
 import { withRouter } from 'react-router-dom/cjs/react-router-dom.min';
+import styled from 'styled-components';
 import CustomButtonComponent from '../CustomButton/CustomButtonComponent';
 import FormInput from '../FormInput/FormInput';
-import './signIn.scss'
+// import './signIn.scss'
 
 const SignInComponent = (props) => {
   const [user, setUser] = React.useState(
@@ -47,32 +48,53 @@ const SignInComponent = (props) => {
       [name] : value
     })
   }
+
+  const SigninContainer = styled.div`
+    display: flex;
+    flex-direction: column;
+    width: 450px;
+    margin-left: 20px;
+    margin-top: 20px;
+  `
+  const ButtonsContainer = styled.div`
+    display: flex;
+    justify-content: space-between;
+  `
+  const SigninTitle = styled.h2`
+    margin: 10px 0;
+  `
+  const SubTitle = styled.span`
+    font-size: 16px;
+  `
+  const StyledForm = styled.form`
+    display: block;
+  `
   return (
-    <div className='sign-in'>
-    <h2>I already have an account</h2>
-    <span>Sign In with your email and password</span>
-    <form onSubmit={handleSubmit}>
-      <FormInput
-      name = 'email'
-      type = 'email'
-      value= {user.email}
-      onChange = {handleChange}
-      label = 'Email'
-      required = 'required'
-      />
-      <FormInput
-      name = "password"
-      type = 'password'
-      value= {user.password}
-      onChange = {handleChange}
-      label = 'Password'
-      required = 'required'
-      />
-      <div className='buttons'>
-      <CustomButtonComponent> Sign In </CustomButtonComponent>
-      </div>
-    </form>
-  </div>
+    <SigninContainer className='sign-in'>
+      <SigninTitle>I already have an account</SigninTitle>
+      <SubTitle>Sign In with your email and password</SubTitle>
+      <StyledForm onSubmit={handleSubmit}>
+        <FormInput
+        name = 'email'
+        type = 'email'
+        value= {user.email}
+        onChange = {handleChange}
+        label = 'Email'
+        required = 'required'
+        />
+        <FormInput
+        name = "password"
+        type = 'password'
+        value= {user.password}
+        onChange = {handleChange}
+        label = 'Password'
+        required = 'required'
+        />
+        <ButtonsContainer className='buttons'>
+        <CustomButtonComponent> Sign In </CustomButtonComponent>
+        </ButtonsContainer>
+      </StyledForm>
+  </SigninContainer>
   )
 }
 

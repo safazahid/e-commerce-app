@@ -1,13 +1,20 @@
 import React from 'react';
-import './HomePage.scss'
+import styled from 'styled-components';
+// import './HomePage.scss'
 import DirectoryMenuComponent from '../../Components/DirectoryMenu/DirectoryMenuComponent';
 
 
-    const HomePageComponent = () => {
+ const HomePageComponent = () => {
+  const HomePage = styled.div`
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0px 20px;
+  `
       return (
-        <div className='homepage'>
+        <HomePage className='homepage'>
           <DirectoryMenuComponent/>
-        </div>
+        </HomePage>
       )
     }
 
